@@ -370,30 +370,7 @@ function Home() {
           <TasbihWidget />
         </section>
 
-        <footer className="flex flex-wrap items-center justify-center gap-3 pb-6">
-          <Button variant="secondary" onClick={() => setSoundOn((s) => !s)}>
-            {soundOn ? <Bell className="size-4" /> : <BellOff className="size-4" />}
-            {soundOn ? "Sound on" : "Sound off"}
-          </Button>
-          <Button variant="secondary" onClick={toggleKiosk}>
-            {kiosk ? <Minimize2 className="size-4" /> : <Maximize2 className="size-4" />}
-            {kiosk ? "Exit display mode" : "Display mode"}
-          </Button>
-          <Button variant="secondary" onClick={handleShare}>
-            <Share2 className="size-4" />
-            Share times
-          </Button>
-          <Button
-            variant="ghost"
-            onClick={() => {
-              if (typeof window === "undefined") return;
-              void navigator.clipboard.writeText(window.location.href);
-              toast.success("Link copied");
-            }}
-          >
-            Copy link
-          </Button>
-        </footer>
+        
       </div>
 
       <AdminDialog
